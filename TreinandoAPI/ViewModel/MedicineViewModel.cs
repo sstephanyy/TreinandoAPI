@@ -14,7 +14,7 @@
 
         public string DosageForm { get; set; }
 
-        public string Composition { get; set; }
+        public string Composition { get; set; } 
 
         public string Manufacturer { get;  set; }
 
