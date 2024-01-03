@@ -15,5 +15,17 @@ namespace TreinandoAPI.Infra
         {
             return _context.Medicines.ToList();
         }
+
+        public void Delete(int id)
+        {
+            var medicine = _context.Medicines.Find(id);
+
+            if (medicine != null)
+            {
+                _context.Medicines.Remove(medicine);
+                _context.SaveChanges();
+            }
+         
+        }
     }
 }

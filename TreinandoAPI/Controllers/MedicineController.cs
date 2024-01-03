@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TreinandoAPI.Model;
 using TreinandoAPI.ViewModel;
 
@@ -32,6 +33,14 @@ namespace TreinandoAPI.Controllers
             var medicines = _mediicineRepository.Get();
 
             return Ok(medicines);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _mediicineRepository.Delete(id);
+
+            return Ok();
         }
     }
 }
