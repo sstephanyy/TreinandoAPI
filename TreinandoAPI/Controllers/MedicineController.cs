@@ -35,7 +35,7 @@ namespace TreinandoAPI.Controllers
             return Ok(medicines);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}")] 
         public IActionResult Delete(int id)
         {
             _mediicineRepository.Delete(id);
