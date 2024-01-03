@@ -8,5 +8,6 @@
 
         void Delete(int id);
 
+        void Update(int id);
     }
 }
