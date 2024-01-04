@@ -28,9 +28,9 @@ namespace TreinandoAPI.Infra
             }
          
         }
-        public void Update(int id, MedicineViewModel updatedMedicine)
+        public void Update(int id, Medicine updatedMedicine)
         {
-            var existingMedicine = _context.Medicine.Find(id);
+            var existingMedicine = _context.Medicines.Find(id);
 
             if (existingMedicine != null)
             {
